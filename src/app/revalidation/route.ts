@@ -1,7 +1,10 @@
 import { unstable_noStore as noStore } from "next/cache";
 
-export function GET() {
+export async function GET() {
   noStore()
+
+  // delay for 1 second
+  await new Promise(resolve => setTimeout(resolve, 1000))
 
   const seconds = Math.ceil(Math.random() * 60)
 
