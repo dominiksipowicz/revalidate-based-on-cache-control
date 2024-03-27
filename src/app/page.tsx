@@ -1,6 +1,6 @@
 import { revalidatePath } from "next/cache";
 
-const BASE_URL = "https://revalidate-based-on-cache-control.vercel.app"
+const BASE_URL = "https://revalidate-based-on-cache-control-dom.vercel.app"
 
 export default async function HomePage() {
   const revalidation = await fetch(BASE_URL + '/revalidation')
